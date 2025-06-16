@@ -1,0 +1,13 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 102, 255);
+    color: aliceblue;
+}
+
+.nav-info{
+    display: flex;
+    color: aliceblue;
+    
+}
+
