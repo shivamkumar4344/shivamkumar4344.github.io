@@ -3,7 +3,7 @@
     border-radius: 4px;
     background-color: #7e08f7;
     width: 350px;
-    height: 350px;
+    height: 420px;
     margin: auto;
     padding-left:20px;
     padding-top: 20px;
@@ -13,9 +13,9 @@
 }
 
 button{
-    width: 100px;
-    height: 30px;
-    border-radius: 25px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
     border: solid 2px black;
     background-color: rgba(1, 136, 203, 0.778);
 }
