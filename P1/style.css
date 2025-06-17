@@ -1,0 +1,10 @@
+.form-container{
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: cadetblue;
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    padding-left:20px;
+    padding-top: 20px;
+}
