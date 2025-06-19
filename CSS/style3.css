@@ -1,0 +1,34 @@
+@media screen and(min-width: 300px) {
+    h2{
+        font-size: 20px;
+    }   
+}
+
+@media screen and(min-width: 600px) {
+    h2{
+        font-size: 60px;
+    }   
+}
+
+@media screen and(min-width: 1000px) {
+    h2{
+        font-size: 100px;
+    }   
+}
+
+.main{
+    background-color: aqua;
+    height: 450px;
+}
+
+@media screen and(min-width:300px){
+    .main{
+        background-color: aqua;
+    }
+}
+
+@media screen and(min-width:600px){
+    .main{
+        background-color: aqua;
+    }
+}
