@@ -1,0 +1,16 @@
+.nav{
+    width: 200px;
+    height: 100x;
+    margin: 10px;
+    background-color: pink;
+    transition-duration: 1s;
+}
+
+h2{
+    height: 100px;
+    text-align: center;
+    align-items: center;
+}
+.nav:hover{
+    transform: scale(1.2,1.2);
+}
