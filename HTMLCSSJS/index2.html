@@ -3,23 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internal Links</title>
+    <title>Forms</title>
 </head>
 <body>
-    <h2>HTML Internal Links</h2>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#services">Services</a></li>
-    </ul>
-        <br><br><br><br><br><br>
-        <h1 id="home">Home</h1>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, voluptate voluptatem aspernatur quisquam ut ipsa molestias quas magnam repellat molestiae harum fugit explicabo veritatis, officia in. Ullam ad quaerat adipisci sint voluptates quidem recusandae alias architecto. Error dignissimos eius consectetur doloribus quaerat enim est, at debitis voluptate esse sapiente fugiat!</h2>
-        <br><br><br><br><br><br>
-    <h1 id="projects">Projects</h1>
-        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste voluptatum et ullam recusandae a illum saepe veritatis. Esse officia dicta possimus dolor ut eaque nulla tempore, similique, facere temporibus illum assumenda debitis quasi. Corporis, tempora cumque, atque autem, ex officiis fugit aut soluta natus ad tempore! Corrupti nam deleniti beatae.</h2>
-        <br><br><br><br><br><br>
-    <h1 id="services">Services</h1>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quasi asperiores recusandae sequi deserunt aspernatur voluptatem? Voluptates quis dolores deleniti nobis a cumque dolore necessitatibus. Optio ducimus expedita necessitatibus culpa, eos eveniet ab fuga rem placeat fugit veniam voluptate hic, cum aperiam perspiciatis eligendi praesentium aspernatur esse? Quos vero reprehenderit ipsam optio laborum officia illum corporis quia, praesentium quam vitae.</h2>
+    <h1>Form Tags</h1>
+    <form action="">
+        <input type="text" placeholder="Enter your name">
+        <br><br>
+        <input type="submit" value="submit">
+        <br><br>
+    </form>
+    <fieldset>
+        <legend>Login Form</legend>
+        <form action="">
+            <input type="email" required placeholder="Enter your email">
+            <br><br>
+            <input type="password" name="password" required placeholder="password">
+            <p>
+                <input type="checkbox" name="">MERN
+                <input type="checkbox" name="" >C++
+            </p>
+            <input type="radio" name="batch">Morning 
+            <input type="radio" name="batch">Evening
+            <br><br>
+            <input type="date" name="date" id="date"><br><br>
+            <p>
+                <select name="course">
+                    <option value="BE">BE</option>
+                    <option value="BTECH">BTECH</option>
+                    <option value="BSc">BSc</option>
+                </select>
+            </p>
+            <p>
+                <input type="color">
+            </p>
+            <p>
+                <select >
+                    <optgroup label="INdia">
+                        <option value="mum">Mumbai</option>
+                        <option value="blr">Bengaluru</option>
+                    </optgroup>
+                    <optgroup label="USA">
+                        <option value="ny">New York</option>
+                        <option value="tx">Texas</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <input list="country">
+                <datalist id="country">
+                    <option>
+                        India
+                    </option>
+                    <option>USA</option>
+                    <option>Canada</option>
+                    <option>Indonesia</option>
+                </datalist>
+            </p>
+            <button>Login</button>
+        </form>
+    </fieldset>
 </body>
 </html>
