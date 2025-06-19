@@ -1,0 +1,20 @@
+.parent{
+    background-color: gray;
+    width: 200px;
+    height: 150px;
+    border: 5px solid black;
+    padding-left: 40px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+
+.child{
+    background-color: pink;
+    width: 150px;
+    height: 120px;
+    border:3px solid black;
+    padding: 10px;
+    text-align: center;
+}
