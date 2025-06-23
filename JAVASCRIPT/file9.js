@@ -33,4 +33,21 @@ const newArr = products.map((val,idx)=>{
   return val = val+5;
 });
 
+const newArr2 = products.filter((value)=>{
+  return value > 2;
+})
+
+const finding = products.find((value)=>{
+  return value === 2;
+})
+console.log(finding);
+console.log(newArr2);
 console.log(newArr);
+
+const res = newArr2.reduce((sum,value)=>{
+  return sum+value;
+},0);
+
+console.log(res);
+
+
