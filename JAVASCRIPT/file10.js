@@ -49,6 +49,9 @@ const orderValue = (id) =>{
   
   console.log("Total order value:",total);
 }
+const order = products.reduce((sum,val)=>{
+  return sum + (cart[val.id] * val.price) ?? 0;
+});
 
 const showCart = () =>{
   let str = ``;
