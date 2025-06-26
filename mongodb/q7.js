@@ -19,3 +19,4 @@
 
 
 // db.students.aggregate({$project:{name:1,age:1,_id:0}});
+// db.students.aggregate([ {$lookup} ])
