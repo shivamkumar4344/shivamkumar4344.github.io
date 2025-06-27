@@ -19,4 +19,4 @@
 
 
 // db.students.aggregate({$project:{name:1,age:1,_id:0}});
-// db.students.aggregate([ {$lookup} ])
+// db.students.aggregate([ {$lookup:{from:"address",localField:"_id",foreignField:"studentId",as:"address"}} ]); -> this will join students and address collections.

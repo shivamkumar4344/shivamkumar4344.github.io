@@ -1,14 +1,23 @@
 .nav{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(0, 102, 255);
-    color: aliceblue;
+    background-color: rgba(115, 169, 251, 0.551);
+    color: black;
 }
 
 .nav-info{
     display: flex;
-    color: aliceblue;
+    color: black;
 }
+
+.nav .nav-info h2{
+    cursor: pointer;
+}
+
+.nav .nav-info h2:hover{
+    color:white;
+}
+
 
 .about{
     display: flex;
@@ -16,22 +25,49 @@
     margin-bottom: 20px;
 }
 
-img{
-    width: 250px;
-    height: 200px;
+.about-me{
+    width: 500px;
 }
 
-button{
-    background-color: rgb(0, 102, 255);
-    border-radius: 3px;
-    border: 1px solid black;
+.about-me p{
+    font-size: large;
 }
+
+img{
+    width: 350px;
+    height: 300px;
+}
+
+button {
+    background-color: rgba(115, 169, 251, 0.551); 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #4338ca; 
+    transform: translateY(-2px);
+}
+
 
 .services-container{
     padding-left: 3px;
     padding-right: 3px;
     display: flex;
     justify-content: space-between;
+    
+}
+
+.services-container h3{
+    color:rgba(0, 0, 255, 0.834);
+    font-size: larger;
 }
 
 .frontend{
@@ -40,6 +76,12 @@ button{
     width: 400px;
     box-shadow: 0 0 8px;
     text-align: center;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+.frontend:hover{
+    transform: translateY(-10px);
 }
 
 
@@ -51,6 +93,13 @@ button{
     width: 400px;
     box-shadow: 0 0 8px;
     text-align: center;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.backend:hover{
+    transform: translateY(-10px);
 }
 
 .mobile-app{
@@ -59,11 +108,98 @@ button{
     width: 400px;
     box-shadow: 0 0 8px;
     text-align: center;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.mobile-app:hover{
+    transform: translateY(-10px);
 }
 
 .services{
     padding-top: 50px;
     height: 400px;
-    background-color: rgb(61, 120, 203);
-    color: whitesmoke;
+    background-color: rgba(115, 169, 251, 0.551);
+    color: black;
+}
+
+
+
+.projects-container{
+    padding-left: 3px;
+    padding-right: 3px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.projects-container h3{
+    color:rgba(0, 0, 255, 0.834);
+    font-size: larger;
+}
+
+.my-bank{
+    border: 2px solid black;
+    border-radius:8px;
+    width: 400px;
+    box-shadow: 0 0 8px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+.my-bank:hover{
+    transform: translateY(-10px);
+    background-color: lightgoldenrodyellow;
+}
+
+
+.food-mart{
+    border: 2px solid black;
+    border-radius:8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 400px;
+    box-shadow: 0 0 8px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.food-mart:hover{
+    transform: translateY(-10px);
+    background-color: lightgoldenrodyellow;
+}
+
+.shopping-cart{
+    border: 2px solid black;
+    border-radius:8px;
+    width: 400px;
+    box-shadow: 0 0 8px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.shopping-cart:hover{
+    transform: translateY(-10px);
+    background-color: lightgoldenrodyellow;
+}
+
+.projects{
+    padding-top: 50px;
+    height: 400px;
+    background-color: rgba(255, 240, 212, 0.878);
+    color: black;
+}
+
+footer{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color:black;
+    height: 50px;
 }

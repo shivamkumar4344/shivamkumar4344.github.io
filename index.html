@@ -1,28 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+       
     <meta charset="UTF-8">
+       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github</title>
+        <title>Github</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            padding: 30px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h3,
+        h4 {
+            color: #34495e;
+            margin-top: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1d4ed8;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+    </style>
 </head>
+
 <body>
-    
-    <h1>Shivam Kumar</h1>
-    <a href="/P2/index.html">My Portfolio</a>
-    <h4><a href="/HTML/index.html">HTML</a></h4>
-    <h4><a href="/CSS/index.html">CSS</a></h4>
-    <h4><a href="/JAVASCRIPT/index.html">Javascript</a></h4>
-    <h3>My Projects</h3>
-    <ul>
-        <li><a href="/P1/index.html">Project 1</a></li>
-        <li> <a href="/Portfolio/home.html">Project 2</a></li>
-    
-    </ul>
-    <br><br>
-    <ul>
-        <li><a href="/A1/index.html">Assignment 1</a></li>
-        <li><a href="/A2/index.html">Assignment 2</a></li>
-    </ul>
-    <a href="#">Link to nowhere</a>
+
+        <h1>Shivam Kumar</h1>
+
+        <div class="card">
+                <h3>Portfolio</h3>
+                <a href="/P2/index.html">My Portfolio</a>
+            </div>
+
+        <div class="card">
+                <h3>Tech Topics</h3>
+                <h4><a href="/HTML/index.html">HTML</a></h4>
+                <h4><a href="/CSS/index.html">CSS</a></h4>
+                <h4><a href="/JAVASCRIPT/index.html">Javascript</a></h4>
+            </div>
+
+        <div class="card">
+                <h3>My Projects</h3>
+                <ul>
+                        <li><a href="/P1/index.html">Project 1</a></li>
+                        <li><a href="/Portfolio/home.html">Project 2</a></li>
+                    </ul>
+            </div>
+
+        <div class="card">
+                <h3>Assignments</h3>
+                <ul>
+                        <li><a href="/A1/index.html">Assignment 1</a></li>
+                        <li><a href="/A2/index.html">Assignment 2</a></li>
+                    </ul>
+            </div>
+
+        <div class="card">
+                <a href="#">Link to nowhere</a>
+            </div>
+
 </body>
+
 </html>
