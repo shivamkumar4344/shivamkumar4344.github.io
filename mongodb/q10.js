@@ -26,3 +26,4 @@
 // db.createCollection("customers")
 // db.customers.insertOne({name:"John"})
 
+//  mytestdb> db.getMongo().setReadPref("secondary")
