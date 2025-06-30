@@ -33,3 +33,19 @@
 //db.marks.aggregate( {$group :{_id:"$name" , total:{$sum:"$score"} }});  -> this will directly group by name and give sum of score as total.
 //db.marks.aggregate( {$group :{_id:{subject:"$subject",name:"$name"} , totalBySubject:{$sum:"$score"} }});
 
+//db.employees.aggregate([{$project:{_id:0,name:1,salary:1,Grade:{$cond:[{$gt:["$salary",2000]},"Grade A","Grade B"]}}]);
+
+//if and else condition in mongodb
+
+//db.employees.aggregate([{$project:{_id:0,name:1,salary:1 ,Grade:{$cond:{if:{$gt:["$salary",2000]},then:"Grade A",else:"Grade B" }}}}]);
+
+//add a new field strSalary in employees
+//store "2500" for all IT employees
+//store "1000" for all other employees
+
+// db.emplyees.update({department:"IT"},{$set:{strSalary:"2500"}});
+//db.employess.aggregate([{$project:{_id:0,name:1,department:1,Sal:{$convert:{input:"$strSalary",to:"int"}}}},{$group:{_id:"$department",total:{$num:"$Sal"}}}]);
+
+
+//creating view
+// db.createView("ViewName","collectionName");
