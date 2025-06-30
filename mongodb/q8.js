@@ -49,3 +49,9 @@
 
 //creating view
 // db.createView("ViewName","collectionName");
+
+
+//db.employees.find({name:{$regex:"Cathy"}});
+
+//db.employees.find({name:{$regex:"^C"}});
+//db.employees.find({name:{$regex:"y$"}});
