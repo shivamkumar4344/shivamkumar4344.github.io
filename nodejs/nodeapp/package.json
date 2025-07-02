@@ -1,6 +1,5 @@
 {
   "name": "nodeapp",
-  "type":"module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,5 +7,8 @@
   },
   "author": "Shivam Kumar",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
 }
