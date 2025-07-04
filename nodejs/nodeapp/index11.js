@@ -1,23 +1,12 @@
 import express from "express";
 import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
+
 const SECRET = "djkab";
 
 const app = express();
 const port = 3300;
-
-
-const users =[ {
-    email:"john@gmail.com",
-    pass:"1234",
-    role:"user"
-},
-{
-    email:"cathy@gmail.com",
-    pass:"1234",
-    role:"admin" 
-}];
-
-
+let users = [];
 
 app.use(express.json());
 
@@ -50,10 +39,12 @@ const authorize = (role) =>{
 }
 
 
-app.post('/login',(req,res)=>{
+app.post('/login',async(req,res)=>{
     const {email,pass} = req.body;
-    const found = users.find((user)=> user.email === email && user.pass === pass);
-    if(found)
+    const exist = users.find((user)=>user.email === email);
+    const checkPass = await bcrypt.compare(pass,exist.pass);
+    // const found = users.find((user)=> user.email === email && user.pass === pass);
+    if(checkPass)
     {
         const token = jwt.sign(found,SECRET,{expiresIn:"1h"});
         res.json( {user:"Found" , token} );
@@ -68,6 +59,19 @@ app.post('/login',(req,res)=>{
 app.get('/users',authenticate,authorize("admin"),(req,res)=>{
     res.json(users);
 })
+
+app.post('/register',async (req,res)=>{
+    const {name,email,pass} = req.body;
+    const hashedPass = await bcrypt.hash(pass,SECRET);
+    users.push({
+        name,
+        email,
+        hashedPass:pass,
+        role
+
+    })
+})
+
 
 app.listen(port,()=>{
     console.log(`Server started on port ${port}`);
