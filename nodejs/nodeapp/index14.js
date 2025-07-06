@@ -8,7 +8,7 @@ dotenv.config();
 const dbhost = process.env.DBCONNECT
 const app = express();
 const port = 3300;
-const secretToken = process.env.SECRET
+const secretToken = process.env.SECRETKEY
 app.use(express.json());
 
 mongoose.connect(dbhost).then(() => {
