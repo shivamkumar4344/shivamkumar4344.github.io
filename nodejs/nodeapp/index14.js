@@ -7,12 +7,13 @@ import jwt from "jsonwebtoken";
 dotenv.config();
 const dbhost = process.env.DBCONNECT
 const app = express();
-const port = 3300;
+const port = process.env.PORT || 3300;
 const secretToken = process.env.SECRETKEY
 app.use(express.json());
 
 mongoose.connect(dbhost).then(() => {
     app.listen(port, () => {
+        console.log("MongoDB Connected");
         console.log(`Server started on port ${port}`);
     });
 });
@@ -30,13 +31,14 @@ const userModel = mongoose.model("User", userSchema);
 const authenticate =(req,res,next)=>{
 
     try{
-        const token = req.headers.authorization;
+        let token = req.headers.authorization;
         token = token.split(" ")[1];
         const verification = jwt.verify(token,secretToken);
         req.role = verification.role;
         next();
     }
     catch(err){
+        console.log(err);
         res.status(401).json({message:"Authetication failed"});
     }
 
@@ -44,7 +46,7 @@ const authenticate =(req,res,next)=>{
 
 const authorize = (role) =>{
     return(req,res,next)=>{
-        if(req.role === "admin")
+        if(role === req.role)
         {   
             next();
 
@@ -91,8 +93,10 @@ app.post("/login",async (req, res) => {
     try {
         const { email, password } = req.body;
         const exist = await userModel.findOne({ email });
-        const checkPass = await bcrypt.compare(password, exist.password);
+
+        
         if (exist) {
+            const checkPass = await bcrypt.compare(password, exist.password);
 
             if (checkPass) {
                 const userObj = {
