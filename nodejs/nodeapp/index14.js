@@ -4,6 +4,9 @@ import dotenv from "dotenv";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
+// import userModel from "./userModel";
+// import { authenticate,authorize } from "./auth.js";
+
 dotenv.config();
 const dbhost = process.env.DBCONNECT
 const app = express();
@@ -23,8 +26,10 @@ const userSchema = mongoose.Schema({
     name: { type: String },
     email: { type: String, unique: true },
     password: { type: String },
-    role: { type: String }
+    role: { type: String ,default:"user"}
 }, { timestamps: true })
+
+
 
 const userModel = mongoose.model("User", userSchema);
 
@@ -82,7 +87,7 @@ app.get("/users", authenticate, authorize("admin"),async (req, res) => {
         const result = await userModel.find();
         res.json(result);
     } catch (err) {
-        console.log(err);
+        console.log(err); 
         res.status(400).send({ message: "Something went wrong" });
     }
 })
@@ -120,5 +125,33 @@ app.post("/login",async (req, res) => {
     }
 
 })
+
+app.patch('/:id',authenticate, authorize("admin"),async(req,res)=>{
+    try{
+    const id = req.params.id;
+    const body = req.body;
+    const result = await userModel.findByIdAndUpdate(id,body);
+    res.status(200).json(result);
+    }catch(err){
+        res.status(400).send({message:"Something went wrong"});
+        console.log(err);
+    }
+
+})
+
+
+app.delete('/:id',authenticate, authorize("admin"),async(req,res)=>{
+    try{
+        const id = req.params.id;
+        const result = await userModel.findByIdAndDelete(id);
+        res.status(200).json(result);
+
+    }catch(err)
+    {
+        res.status(400).json({message:"Not deleted"});
+        console.log(err);
+    }
+})
+
 
 
