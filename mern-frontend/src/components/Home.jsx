@@ -34,7 +34,7 @@ export default function Home()
 {
     const [run,setRun] = useState(0);
     const [wicket,setWicket] = useState(0);
-    const[message,setMessage] = useState("");
+    const[message,setMessage] = useState("Start the Game");
     const IncrementRun = ()=>{
         if(wicket == 10){
             setMessage("Game Over!!")
@@ -61,7 +61,11 @@ export default function Home()
         <p>{run}</p>
         <button onClick={IncremetWicket}>Wicket</button>
         <p>{wicket}</p>
-        <div style={{border:"2px solid black",width:"100px",}}>
+        <div style={{
+            border:"2px solid black",
+            width:"100px",
+            color: message === "Game Over!!" ? "red" : message === "Well Done" ? "green" : "orange"
+        }}>
             {message}
         </div>
         </>
