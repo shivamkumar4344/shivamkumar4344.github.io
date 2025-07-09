@@ -3,6 +3,7 @@ export default function Register()
     return(
         <>
             <div className="form-container">
+                <h1>Register Form</h1>
                 <form action="">
                     <label htmlFor="firstName">FirstName</label><br />
                     <input type="text" name="firstName" id="firstName" />
