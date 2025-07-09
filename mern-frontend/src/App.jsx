@@ -1,4 +1,5 @@
 import Home from "./components/Home"
+import Register from "./components/Register"
 import "./App.css"
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
   //   </>
   return(
     <>
-      <Home/>
+      {/* <Home/> */}
+      <Register/>
     </>
   )
   

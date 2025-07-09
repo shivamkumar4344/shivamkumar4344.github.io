@@ -1,3 +1,10 @@
 .App-Container{
   background-color: #eeeeee;
 }
+
+.form-container{
+    border: 2px solid black;
+    box-shadow: 0 0 8px black;
+    width:250px;
+    height:300px;
+}
