@@ -1,10 +1,37 @@
 .App-Container{
   background-color: #eeeeee;
+
 }
 
 .form-container{
-    border: 2px solid black;
-    box-shadow: 0 0 8px black;
-    width:250px;
-    height:300px;
+  border: 2px solid black;
+  box-shadow: 0 0 8px black;
+  width:400px;
+  height:500px;
+  margin: 0 auto;
+}
+
+.form-container h1{
+  text-align: center;
+}
+
+.form-container button{
+  width: 150px;
+  height: 40px;
+  border-radius: 12px;
+  border: white solid 2px;
+  background-color: black;
+  color: whitesmoke;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-left: 30%;
+}
+
+.form-container button:hover{
+  transform: translateY(-3px);
+}
+
+.form-container input{
+  padding: 5px;
+  margin: 5px;
 }
